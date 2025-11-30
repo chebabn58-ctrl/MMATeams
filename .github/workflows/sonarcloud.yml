@@ -15,10 +15,13 @@ jobs:
         with:
           node-version: '18'
       - name: SonarCloud Scan
-        uses: SonarSource/sonarqube-scan-action@v2
+        uses: SonarSource/sonarcloud-github-action@master
         with:
-          projectBaseDir: .
-          sonarToken: ${{ secrets.SONAR_TOKEN }}
-          sonarHostUrl: 'https://sonarcloud.io'
+          organization: "chebabn58-ctrl"
+          projectKey: "MMATeams"
+          projectName: "MMATeams"
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
 
 
