@@ -1,1 +1,5 @@
-console.log("Test SonarCloud pour QA");
+function hi() {
+  console.log("test sonar");
+}
+hi();
+
