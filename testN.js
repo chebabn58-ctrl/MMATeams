@@ -1,13 +1,9 @@
-// Petit test SonarCloud - QA
+// Exemple simple pour tester SonarCloud - sécurité
 
-function addition(a, b) {
-    return a + b;
+// Mauvaise pratique : utiliser eval (SonarCloud le détectera comme vulnérabilité)
+function executeCode(userInput) {
+    eval(userInput); // ⚠️ Évité en vrai code !
 }
 
-function multiplication(a, b) {
-    return a * b;
-}
-
-// Test des fonctions
-console.log("Addition 2 + 3 =", addition(2, 3));
-console.log("Multiplication 4 * 5 =", multiplication(4, 5));
+// Appel de la fonction avec une chaîne de test
+executeCode("console.log('Test sécurité')");
